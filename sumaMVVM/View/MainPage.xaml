@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:sumaMVVM.ViewModel"
+             x:Class="sumaMVVM.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="a= "></Label>
+                <Entry Text="{Binding A}"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="b= "></Label>
+                <Entry Text="{Binding B}"></Entry>
+            </StackLayout>
+            <Label Text="{Binding Wynik}"></Label>
+            <Button Text="Oblicz" Command="{Binding Suma}"></Button>
+            <Label Text="{Binding Dzialanie}"></Label>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
